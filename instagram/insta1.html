@@ -27,7 +27,7 @@
 		-moz-border-radius: 5px;
 		border-radius: 5px;
 	}
-	#myModal {
+	#myModal{
 		position: fixed; /* Stay in place */
 		padding-top: 100px; /* Location of the box */
 		left: 0;
@@ -54,38 +54,48 @@
 	margin-top: 25px;
 	}
 
-	.mystyle {
-	width: 100%;
-	padding: 25px;
-	background-color: coral;
-	color: white;
-	font-size: 25px;
-	box-sizing: border-box;
-	}
 	p {display: inline-block;
 		background-color: white;
-			padding: 0px 0px 0px 0px;  
-			margin: 0px 0px 0px 0px; ;
+		padding: 0px 0px 0px 0px;  
+		margin: 0px 0px 0px 0px; ;
 	}
 	div.container {
-	text-align: left;
-	padding: 0px 0px 0px 0px;
-	margin-left: 0px;
-	background-color: white;
+		text-align: left;
+		padding: 0px 0px 0px 0px;
+		margin-left: 0px;
+		background-color: white;
+		display: inline;
+		margin: auto;
 	}
 
+	.pag{
+		float: right;
+		display: inline-block;
+		padding-right: 10px; 
+	}
+	.pag1{
+		float: right;
+		display: inline-block;
+		padding-right: 10px; 
+	}
 
+	#cabecera{
+		float: left;
+		display: inline;
+		margin: auto;
+		padding: 0px, 0px, 0px, 0px;
+	}
 	</style>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-8">
-				<i class="fa fa-instagram" aria-hidden="true" width="120" height="50"></i>
+			<div class="col-9">
+				<i class="fa fa-instagram fa-2x"  aria-hidden="true" width="120" height="50" ></i> 
 				<img src="Instagram_logo.svg.png" width="120" height="50">        
 			</div>
-			<div class="col-2">
-				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+			<div class="col-3">
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" id="cabecera">
 				Create a New Post </button>
 
 				<!-- Modal -->
@@ -111,9 +121,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-2">
-				<div class="dropdown">
+
+				<div class="dropdown" id="cabecera">
 					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-cog" aria-hidden="true"></i>
 					</button>
@@ -142,35 +151,35 @@
 	<div class="container-fluid" id="cuadricula" style= "display: block">
 		<div class="row">
 			<div class="col-4">
-				<img src="foto1.jpg" height="200" width="500"  >        
+				<img src="foto1.jpg" height="300" width="500"  >        
 			</div>
 			<div class="col-4">
-				<img src="foto2.jpg" height="200" width="500" >        
+				<img src="foto2.jpg" height="300" width="500" >        
 			</div>
 			<div class="col-4">
-				<img src="foto3.jpg" height="200" width="500"  >        
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4">
-				<img src="foto4.jpg" height="200" width="500">        
-			</div>
-			<div class="col-4">
-				<img src="foto5.jpg" height="200" width="500">        
-			</div>
-			<div class="col-4">
-				<img src="foto6.jpg" height="200" width="500">        
+				<img src="foto3.jpg" height="300" width="500"  >        
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-4">
-				<img src="foto7.jpg" height="200" width="500">        
+				<img src="foto4.jpg" height="300" width="500">        
 			</div>
 			<div class="col-4">
-				<img src="foto8.jpg" height="200" width="500">        
+				<img src="foto5.jpg" height="300" width="500">        
 			</div>
 			<div class="col-4">
-				<video autoplay="" height="200" width="500" muted>
+				<img src="foto6.jpg" height="300" width="500">        
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<img src="foto7.jpg" height="300" width="500">        
+			</div>
+			<div class="col-4">
+				<img src="foto8.jpg" height="300" width="500">        
+			</div>
+			<div class="col-4">
+				<video autoplay="" height="300" width="500" muted>
 					<source src="http://assets.breatheco.de/video/why-pair-programming.mp4" 
 					type="video/mp4">
 				</video>     
@@ -185,15 +194,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto1.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -206,15 +215,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto2.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -227,15 +236,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto3.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -248,15 +257,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto4.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -269,15 +278,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto5.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -290,15 +299,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto6.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -312,15 +321,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto7.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -334,15 +343,15 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<img src="foto8.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
@@ -355,7 +364,7 @@
 			</div>
 			<div class="col-6" id="fotos">
 				<p>My first photo</p>
-				<p align="right"> 12/14 </p>
+				<p align="right" class="pag"> 12/14 </p>
 				<video autoplay="" height="200" width="100%" muted>
 					<source src="http://assets.breatheco.de/video/why-pair-programming.mp4" 
 					type="video/mp4">
@@ -365,8 +374,8 @@
 					<p><strong>23 Likes </strong></p>
 					<p>This is my first photo of the feed. This is a multi line comment for testing purposes. 
 					I am learning to code with #BreatheCode</p>
-					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... 
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
+					<p> <i class="fa fa-heart-o" aria-hidden="true"></i>   Comment... </p>
+					<p align="right" class="pag1"> <i class="fa fa-ellipsis-v" aria-hidden="true"></i> </p>
 					</span>
 				</div>
 			</div>
