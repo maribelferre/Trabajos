@@ -58,6 +58,8 @@
 		background-color: white;
 		padding: 0px 0px 0px 0px;  
 		margin: 0px 0px 0px 0px; ;
+		font-family: 'Arial', serif;
+		font-size: 18px;
 	}
 	div.container {
 		text-align: left;
@@ -67,7 +69,10 @@
 		display: inline;
 		margin: auto;
 	}
-
+	#cuadro
+	{
+		padding: 2px 2px 2px 2px;  
+	}
 	.pag{
 		float: right;
 		display: inline-block;
@@ -83,19 +88,37 @@
 		float: left;
 		display: inline;
 		margin: auto;
-		padding: 0px, 0px, 0px, 0px;
+	}
+
+	#titulo
+	{ 
+		font-family: 'Arial', serif;
+		font-size: 24px;
+	}
+	#dropdownMenu2
+	{
+	 		background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+	}
+	#menu{
+		padding: 10px;
 	}
 	</style>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-9">
+			<div class="col-1">
+			</div>
+			<div class="col-8">
 				<i class="fa fa-instagram fa-2x"  aria-hidden="true" width="120" height="50" ></i> 
 				<img src="Instagram_logo.svg.png" width="120" height="50">        
 			</div>
-			<div class="col-3">
-				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" id="cabecera">
+			<div class="col-3" id="menu">
+				<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal" id="cabecera">
 				Create a New Post </button>
 
 				<!-- Modal -->
@@ -110,8 +133,6 @@
 								<i class="fa fa-map-marker fa-pull-left fa-border" aria-hidden="true"></i>
 
 							</div>
-
-
 							<div class="modal-footer">
 								<!-- Secondary, outline button -->
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -121,7 +142,7 @@
 						</div>
 					</div>
 				</div>
-
+				<!-- Menu -->
 				<div class="dropdown" id="cabecera">
 					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-cog" aria-hidden="true"></i>
@@ -136,6 +157,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Botones Cuadricula o Lista -->
 		<div class="row">
 			<div class="col-12" id="formato">
 				<button type="button" class="btn btn-link" onclick="myFunction()">
@@ -147,39 +169,39 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Fotos en Cuadricula -->
 	<div class="container-fluid" id="cuadricula" style= "display: block">
 		<div class="row">
-			<div class="col-4">
-				<img src="foto1.jpg" height="300" width="500"  >        
+			<div class="col-4" id="cuadro">
+				<img src="foto1.jpg" height="250" width="100%"  >        
 			</div>
-			<div class="col-4">
-				<img src="foto2.jpg" height="300" width="500" >        
+			<div class="col-4" id="cuadro">
+				<img src="foto2.jpg" height="250" width="100%" >        
 			</div>
-			<div class="col-4">
-				<img src="foto3.jpg" height="300" width="500"  >        
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4">
-				<img src="foto4.jpg" height="300" width="500">        
-			</div>
-			<div class="col-4">
-				<img src="foto5.jpg" height="300" width="500">        
-			</div>
-			<div class="col-4">
-				<img src="foto6.jpg" height="300" width="500">        
+			<div class="col-4" id="cuadro">
+				<img src="foto3.jpg" height="250" width="100%"  >        
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-4">
-				<img src="foto7.jpg" height="300" width="500">        
+			<div class="col-4" id="cuadro">
+				<img src="foto4.jpg" height="250" width="100%">        
 			</div>
-			<div class="col-4">
-				<img src="foto8.jpg" height="300" width="500">        
+			<div class="col-4" id="cuadro">
+				<img src="foto5.jpg" height="250" width="100%">        
 			</div>
-			<div class="col-4">
-				<video autoplay="" height="300" width="500" muted>
+			<div class="col-4" id="cuadro">
+				<img src="foto6.jpg" height="250" width="100%">        
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4" id="cuadro">
+				<img src="foto7.jpg" height="250" width="100%">        
+			</div>
+			<div class="col-4" id="cuadro">
+				<img src="foto8.jpg" height="250" width="100%">        
+			</div>
+			<div class="col-4" id="cuadro">
+				<video autoplay="" height="250" width="100%" muted>
 					<source src="http://assets.breatheco.de/video/why-pair-programming.mp4" 
 					type="video/mp4">
 				</video>     
@@ -187,14 +209,14 @@
 		</div>
 	</div>
 
-
+	<!-- Fotos Tipo Lista -->
 	<div class="container-fluid" id="lista" style= "display: none">
 		<div class="row">
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto1.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -214,8 +236,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto2.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -235,8 +257,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto3.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -256,8 +278,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto4.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -277,8 +299,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto5.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -298,8 +320,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto6.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -320,8 +342,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto7.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -342,8 +364,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<img src="foto8.jpg" alt="foto" style="height="200" width="100%"">
 				<div class="container">
 					<span>
@@ -363,8 +385,8 @@
 			<div class="col-3">
 			</div>
 			<div class="col-6" id="fotos">
-				<p>My first photo</p>
-				<p align="right" class="pag"> 12/14 </p>
+				<p id="titulo">My first photo</p>
+				<p align="right" class="pag" id="titulo"> 12/14 </p>
 				<video autoplay="" height="200" width="100%" muted>
 					<source src="http://assets.breatheco.de/video/why-pair-programming.mp4" 
 					type="video/mp4">
@@ -384,7 +406,7 @@
 		</div>
 
 	</div>
-
+	<!-- Funciones para activar ventana -->
 	<script>
 		var x = document.getElementById("cuadricula");
 		var y = document.getElementById("lista");
